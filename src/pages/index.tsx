@@ -28,10 +28,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-screen w-screen bg-[#0b0b0b] opacity-90">
-        <h1 className="text-4xl text-[#E3E3E3]">T3-Portfolio</h1>
-        <h2 className="text-4xl text-[#999999]">Full-Stack Developer</h2>
+        <Hero />
       </main>
     </>
+  );
+}
+
+function Hero() {
+  return (
+    <div className="flex h-[500px] w-full flex-col justify-center">
+      <div className="m-auto">
+        <h1 className="text-4xl text-[#E3E3E3]">Hello, I am Anthony.</h1>
+        <h2 className="text-4xl text-[#999999]">We Create</h2>
+        <h2 className="text-4xl text-[#999999]">strong brands</h2>
+        <h2 className="text-4xl text-[#999999]">for a tough world.</h2>
+      </div>
+    </div>
   );
 }
 
