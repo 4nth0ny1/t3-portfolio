@@ -3,6 +3,7 @@ import Head from "next/head";
 // import Link from "next/link";
 // import { api } from "~/utils/api";
 import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Home() {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -52,9 +53,49 @@ function Hero() {
     <div className="flex h-[500px] w-full flex-col justify-center">
       <div className="m-auto">
         <h1 className="text-4xl text-[#E3E3E3]">Hello, I am Anthony.</h1>
-        <h2 className="text-4xl text-[#999999]">I {firstLine}</h2>
-        <h2 className="text-4xl text-[#999999]">{secondLine} brands</h2>
-        <h2 className="text-4xl text-[#999999]">for a {thirdLine} world.</h2>
+        <div className="flex flex-row gap-4">
+          <p className="text-4xl text-[#999999]">I</p>
+          <AnimatePresence>
+            <motion.h2
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -10, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="text-4xl text-[#999999]"
+            >
+              {firstLine}
+            </motion.h2>
+          </AnimatePresence>
+        </div>
+        <div className="flex flex-row gap-4">
+          <AnimatePresence>
+            <motion.h2
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -10, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="text-4xl text-[#999999]"
+            >
+              {secondLine}
+            </motion.h2>
+          </AnimatePresence>
+          <p className="text-4xl text-[#999999]">brands</p>
+        </div>
+        <div className="flex flex-row gap-4">
+          <p className="text-4xl text-[#999999]">for a</p>
+          <AnimatePresence>
+            <motion.h2
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -10, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="text-4xl text-[#999999]"
+            >
+              {thirdLine}
+            </motion.h2>
+          </AnimatePresence>
+          <p className="text-4xl text-[#999999]">world.</p>
+        </div>
       </div>
     </div>
   );
