@@ -37,15 +37,11 @@ export default function Home() {
 }
 
 function Hero() {
-  const [firstLine, setFirstLine] = useState("create");
-  const [secondLine, setSecondLine] = useState("strong");
-  const [thirdLine, setThirdLine] = useState("tough");
+  const [text, setText] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setFirstLine("help");
-      setSecondLine("weak");
-      setThirdLine("easy");
+      setText(!text);
     }, 3000);
   }, []);
 
@@ -55,45 +51,57 @@ function Hero() {
         <h1 className="text-4xl text-[#E3E3E3]">Hello, I am Anthony.</h1>
         <div className="flex flex-row gap-4">
           <p className="text-4xl text-[#999999]">I</p>
-          <AnimatePresence>
-            <motion.h2
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="text-4xl text-[#999999]"
-            >
-              {firstLine}
-            </motion.h2>
-          </AnimatePresence>
+          {!text ? (
+            <h2 className="text-4xl text-[#999999]">create</h2>
+          ) : (
+            <AnimatePresence>
+              <motion.h2
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="text-4xl text-[#999999]"
+              >
+                help
+              </motion.h2>
+            </AnimatePresence>
+          )}
         </div>
         <div className="flex flex-row gap-4">
-          <AnimatePresence>
-            <motion.h2
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="text-4xl text-[#999999]"
-            >
-              {secondLine}
-            </motion.h2>
-          </AnimatePresence>
+          {!text ? (
+            <h2 className="text-4xl text-[#999999]">strong</h2>
+          ) : (
+            <AnimatePresence>
+              <motion.h2
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="text-4xl text-[#999999]"
+              >
+                weak
+              </motion.h2>
+            </AnimatePresence>
+          )}
           <p className="text-4xl text-[#999999]">brands</p>
         </div>
         <div className="flex flex-row gap-4">
           <p className="text-4xl text-[#999999]">for a</p>
-          <AnimatePresence>
-            <motion.h2
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="text-4xl text-[#999999]"
-            >
-              {thirdLine}
-            </motion.h2>
-          </AnimatePresence>
+          {!text ? (
+            <h2 className="text-4xl text-[#999999]">tough</h2>
+          ) : (
+            <AnimatePresence>
+              <motion.h2
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="text-4xl text-[#999999]"
+              >
+                easy
+              </motion.h2>
+            </AnimatePresence>
+          )}
           <p className="text-4xl text-[#999999]">world.</p>
         </div>
       </div>
