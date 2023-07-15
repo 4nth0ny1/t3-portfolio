@@ -2,6 +2,7 @@
 import Head from "next/head";
 // import Link from "next/link";
 // import { api } from "~/utils/api";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -35,13 +36,25 @@ export default function Home() {
 }
 
 function Hero() {
+  const [firstLine, setFirstLine] = useState("create");
+  const [secondLine, setSecondLine] = useState("strong");
+  const [thirdLine, setThirdLine] = useState("tough");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFirstLine("help");
+      setSecondLine("weak");
+      setThirdLine("easy");
+    }, 3000);
+  }, []);
+
   return (
     <div className="flex h-[500px] w-full flex-col justify-center">
       <div className="m-auto">
         <h1 className="text-4xl text-[#E3E3E3]">Hello, I am Anthony.</h1>
-        <h2 className="text-4xl text-[#999999]">We Create</h2>
-        <h2 className="text-4xl text-[#999999]">strong brands</h2>
-        <h2 className="text-4xl text-[#999999]">for a tough world.</h2>
+        <h2 className="text-4xl text-[#999999]">I {firstLine}</h2>
+        <h2 className="text-4xl text-[#999999]">{secondLine} brands</h2>
+        <h2 className="text-4xl text-[#999999]">for a {thirdLine} world.</h2>
       </div>
     </div>
   );
