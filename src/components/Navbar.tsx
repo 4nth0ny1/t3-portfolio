@@ -1,22 +1,58 @@
+import { motion } from "framer-motion";
 export default function Navbar() {
   return (
     <div className="navbar bg-[#0b0b0b] py-14 text-[#999999] opacity-90 md:px-32">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl normal-case">UI</a>
+        <motion.a
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="btn btn-ghost text-xl normal-case"
+        >
+          UI
+        </motion.a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1 text-lg">
           <li>
-            <a>About</a>
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="btn btn-ghost text-xl normal-case"
+            >
+              About
+            </motion.a>
           </li>
           <li>
-            <a>Work</a>
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="btn btn-ghost text-xl normal-case"
+            >
+              Work
+            </motion.a>
           </li>
           <li>
-            <a>Blog</a>
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="btn btn-ghost text-xl normal-case"
+            >
+              Blog
+            </motion.a>
           </li>
           <li>
-            <a>Contact</a>
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="btn btn-ghost text-xl normal-case"
+            >
+              Contact
+            </motion.a>
           </li>
         </ul>
       </div>

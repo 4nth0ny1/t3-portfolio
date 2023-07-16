@@ -13,14 +13,14 @@ const MyApp: AppType<{ session: Session | null }> = ({
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setLoading(!loading), 1000);
+    setTimeout(() => setLoading(!loading), 3000);
   }, []);
 
   return (
     <SessionProvider session={session}>
       {!loading ? (
         <div className="flex h-screen w-full flex-col justify-center bg-black">
-          <h1 className="text-4xl text-[#E3E3E3]">Hello, I am Anthony.</h1>
+          <h1 className="text-center text-5xl text-[#E3E3E3]">😊</h1>
         </div>
       ) : (
         <>
@@ -33,13 +33,3 @@ const MyApp: AppType<{ session: Session | null }> = ({
 };
 
 export default api.withTRPC(MyApp);
-
-// sequence
-/*
-black screen text
-h1 is typed 
-Then h2s appear
-change text 
-then background fades to another color
-website components fade in
-*/

@@ -47,7 +47,12 @@ function Hero() {
 
   return (
     <div className="flex h-[500px] w-full flex-col justify-center">
-      <div className="m-auto">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="m-auto"
+      >
         <h1 className="text-4xl text-[#E3E3E3]">Hello, I am Anthony.</h1>
         <div className="flex flex-row gap-4">
           <p className="text-4xl text-[#999999]">I</p>
@@ -104,7 +109,7 @@ function Hero() {
           )}
           <p className="text-4xl text-[#999999]">world.</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
