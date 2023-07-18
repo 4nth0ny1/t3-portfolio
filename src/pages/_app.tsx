@@ -5,6 +5,7 @@ import { api } from "~/utils/api";
 import "~/styles/globals.css";
 import Navbar from "../components/Navbar";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -23,10 +24,14 @@ const MyApp: AppType<{ session: Session | null }> = ({
           <h1 className="text-center text-5xl text-[#E3E3E3]">😊</h1>
         </div>
       ) : (
-        <>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+        >
           <Navbar />
           <Component {...pageProps} />
-        </>
+        </motion.div>
       )}
     </SessionProvider>
   );
