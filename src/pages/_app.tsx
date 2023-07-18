@@ -14,7 +14,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setLoading(!loading), 3000);
+    setTimeout(() => setLoading(!loading), 500);
   }, []);
 
   return (
@@ -29,8 +29,12 @@ const MyApp: AppType<{ session: Session | null }> = ({
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
         >
-          <Navbar />
-          <Component {...pageProps} />
+          <div className="h-screen w-screen bg-[#0b0b0b] opacity-90">
+            <div className="py-14 md:px-32">
+              <Navbar />
+              <Component {...pageProps} />
+            </div>
+          </div>
         </motion.div>
       )}
     </SessionProvider>
