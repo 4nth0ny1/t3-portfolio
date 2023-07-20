@@ -4,6 +4,7 @@ import Head from "next/head";
 // import { api } from "~/utils/api";
 import Hero from "../components/index/Hero";
 import FeaturedBlogs from "~/components/index/FeaturedBlogs";
+import FeaturedProjects from "~/components/index/FeaturedProjects";
 
 export default function Home() {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -31,6 +32,7 @@ export default function Home() {
       </Head>
       <main className="h-full w-full bg-[#0b0b0b] opacity-90">
         <Hero />
+        <FeaturedProjects />
         <FeaturedBlogs />
       </main>
     </>

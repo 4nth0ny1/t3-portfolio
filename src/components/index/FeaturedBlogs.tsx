@@ -24,7 +24,7 @@ export default function FeaturedBlogs() {
   ];
   return (
     <div>
-      <h2 className="mb-32 text-center font-thin text-[#999999]">
+      <h2 className="mb-32 text-center font-thin text-[#999999] ">
         FROM THE BLOG
       </h2>
       <div className="flex w-full flex-col gap-8 md:flex-row">
