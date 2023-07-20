@@ -30,7 +30,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
           transition={{ duration: 2 }}
         >
           <div className="h-full w-full bg-[#0b0b0b] opacity-90">
-            <div className="py-14 md:px-32">
+            <div className="py-14">
               <Navbar />
               <Component {...pageProps} />
             </div>

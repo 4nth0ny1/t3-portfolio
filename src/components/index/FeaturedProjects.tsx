@@ -31,7 +31,7 @@ export default function FeaturedProjects() {
     },
   ];
   return (
-    <div className="bg-[#E3E3E3] px-40">
+    <div className="px-40">
       <h2 className="p-20 text-center text-sm">SELECT PROJECTS</h2>
       {FAKE_PROJECTS.map((project) => {
         return (

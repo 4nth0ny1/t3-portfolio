@@ -11,7 +11,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="flex h-[550px] flex-col items-center justify-center">
+    <div className="flex h-[850px] flex-col items-center justify-center">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

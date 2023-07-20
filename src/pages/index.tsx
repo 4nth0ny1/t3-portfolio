@@ -5,6 +5,7 @@ import Head from "next/head";
 import Hero from "../components/index/Hero";
 import FeaturedBlogs from "~/components/index/FeaturedBlogs";
 import FeaturedProjects from "~/components/index/FeaturedProjects";
+import { motion } from "framer-motion";
 
 export default function Home() {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -32,7 +33,16 @@ export default function Home() {
       </Head>
       <main className="h-full w-full bg-[#0b0b0b] opacity-90">
         <Hero />
-        <FeaturedProjects />
+
+        <motion.div
+          initial={{ backgroundColor: "#0b0b0b", opacity: 0 }}
+          whileInView={{ backgroundColor: "#E3E3E3", opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="w-ful h-full"
+        >
+          <FeaturedProjects />
+        </motion.div>
+
         <FeaturedBlogs />
       </main>
     </>
