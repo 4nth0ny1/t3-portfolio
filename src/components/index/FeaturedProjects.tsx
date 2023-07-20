@@ -14,19 +14,19 @@ export default function FeaturedProjects() {
     {
       id: "two",
       image: "adam-bignell-coast.jpg",
-      title: "Why We Need Strong Brands for a Tough World",
+      title: "New York Life Recruiter Website",
       subtitle:
         "A 130-years-old Japanese brewery, only supplier to the Japanese Imperial Household, Sakari wants to help the world understand and enjoy sake better.",
       githubUrl: "",
-      websiteLink: "",
+      websiteLink: "https://nylfinancialprofessionalcareer.com/",
     },
     {
       id: "three",
       image: "jaredd-craig-mist.jpg",
-      title: "5 Personal Branding Examples From Our Portfolio",
+      title: "React Reddit",
       subtitle:
         "A 130-years-old Japanese brewery, only supplier to the Japanese Imperial Household, Sakari wants to help the world understand and enjoy sake better.",
-      githubUrl: "",
+      githubUrl: "https://github.com/4nth0ny1/reddit-front-2",
       websiteLink: "",
     },
   ];

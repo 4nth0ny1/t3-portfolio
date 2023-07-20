@@ -32,16 +32,20 @@ export default function FeaturedProject({
             </button>
           </Link>
           <div>
-            <Link href={githubUrl}>
-              <button className="border-2 px-4 py-2 text-3xl text-sm hover:text-[#00d084]">
-                <BsGithub />
-              </button>
-            </Link>
-            <Link href={websiteLink}>
-              <button className="border-2 px-4 py-2 text-3xl text-sm hover:text-[#00d084]">
-                <BiLink />
-              </button>
-            </Link>
+            {githubUrl && (
+              <Link href={githubUrl}>
+                <button className="border-2 px-4 py-2 text-3xl text-sm hover:text-[#00d084]">
+                  <BsGithub />
+                </button>
+              </Link>
+            )}
+            {websiteLink && (
+              <Link href={websiteLink}>
+                <button className="border-2 px-4 py-2 text-3xl text-sm hover:text-[#00d084]">
+                  <BiLink />
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
