@@ -4,7 +4,7 @@ export default function FeaturedProjects() {
   const FAKE_PROJECTS = [
     {
       id: "one",
-      image: "martin-martz-circles.jpg",
+      image: "manageit.jpg",
       title: "T3-Manage-It",
       subtitle:
         "A 130-years-old Japanese brewery, only supplier to the Japanese Imperial Household, Sakari wants to help the world understand and enjoy sake better.",
@@ -13,7 +13,7 @@ export default function FeaturedProjects() {
     },
     {
       id: "two",
-      image: "adam-bignell-coast.jpg",
+      image: "newyorklife.jpg",
       title: "New York Life Recruiter Website",
       subtitle:
         "A 130-years-old Japanese brewery, only supplier to the Japanese Imperial Household, Sakari wants to help the world understand and enjoy sake better.",
@@ -22,7 +22,7 @@ export default function FeaturedProjects() {
     },
     {
       id: "three",
-      image: "jaredd-craig-mist.jpg",
+      image: "reddit.jpg",
       title: "React Reddit",
       subtitle:
         "A 130-years-old Japanese brewery, only supplier to the Japanese Imperial Household, Sakari wants to help the world understand and enjoy sake better.",
@@ -32,7 +32,7 @@ export default function FeaturedProjects() {
   ];
   return (
     <div className="px-80">
-      <h2 className="p-20 text-center text-sm">SELECT PROJECTS</h2>
+      <h2 className="p-20 text-center text-2xl">SELECT PROJECTS</h2>
       {FAKE_PROJECTS.map((project) => {
         return (
           <FeaturedProjectItem
