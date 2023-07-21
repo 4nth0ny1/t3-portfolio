@@ -18,7 +18,7 @@ export default function Hero() {
         transition={{ duration: 1 }}
       >
         <h1 className="text-4xl text-[#E3E3E3]">Hello, I am Anthony.</h1>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 ">
           <p className="text-4xl text-[#999999]">I</p>
           {!text ? (
             <h2 className="text-4xl text-[#999999]">create</h2>

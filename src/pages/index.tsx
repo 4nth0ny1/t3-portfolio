@@ -46,7 +46,7 @@ export default function Home() {
         <motion.div
           initial={{ backgroundColor: "#E3E3E3" }}
           whileInView={{ backgroundColor: "#0b0b0b" }}
-          transition={{ delay: 1.5, duration: 1 }}
+          transition={{ delay: 1, duration: 1 }}
           className="h-full w-full"
         >
           <FeaturedBlogs />
