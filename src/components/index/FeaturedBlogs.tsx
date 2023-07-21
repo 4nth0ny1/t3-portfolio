@@ -23,7 +23,7 @@ export default function FeaturedBlogs() {
     },
   ];
   return (
-    <div className="pt-32">
+    <div className="px-40 pt-32">
       <h2 className="mb-32 text-center font-thin text-[#999999] ">
         FROM THE BLOG
       </h2>

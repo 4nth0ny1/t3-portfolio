@@ -21,8 +21,12 @@ export default function FeaturedBlog({
       onMouseOver={() => setIsHovering(true)}
       onMouseOut={() => setIsHovering(false)}
     >
-      <div className="hover:inline-block hover:scale-125 hover:overflow-hidden">
-        <img src={image} alt="blog-image" className="h-[325px] w-full" />
+      <div className="overflow-hidden">
+        <img
+          src={image}
+          alt="blog-image"
+          className="h-[325px] w-full transition duration-1000 hover:scale-125"
+        />
       </div>
       {isHovering ? (
         <div className="p-8">

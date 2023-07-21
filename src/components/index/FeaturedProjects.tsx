@@ -1,4 +1,4 @@
-import FeaturedProject from "./FeaturedProject";
+import FeaturedProjectItem from "./FeaturedProjectItem";
 
 export default function FeaturedProjects() {
   const FAKE_PROJECTS = [
@@ -35,7 +35,7 @@ export default function FeaturedProjects() {
       <h2 className="p-20 text-center text-sm">SELECT PROJECTS</h2>
       {FAKE_PROJECTS.map((project) => {
         return (
-          <FeaturedProject
+          <FeaturedProjectItem
             key={project.id}
             id={project.id}
             image={project.image}
