@@ -35,9 +35,9 @@ export default function Home() {
         <Hero />
 
         <motion.div
-          initial={{ backgroundColor: "#0b0b0b", opacity: 0 }}
-          whileInView={{ backgroundColor: "#E3E3E3", opacity: 1 }}
-          transition={{ duration: 2 }}
+          initial={{ backgroundColor: "#0b0b0b" }}
+          whileInView={{ backgroundColor: "#E3E3E3" }}
+          transition={{ delay: 1.5, duration: 1 }}
           className="w-ful h-full"
         >
           <FeaturedProjects />
