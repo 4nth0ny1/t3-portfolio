@@ -45,7 +45,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           initial={{ backgroundColor: "#E3E3E3" }}
-          whileInView={{ backgroundColor: "#0b0b0b" }}
+          whileInView={{ backgroundColor: "#000000" }}
           transition={{ delay: 1, duration: 1 }}
           className="h-full w-full"
         >

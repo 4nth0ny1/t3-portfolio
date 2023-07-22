@@ -20,7 +20,7 @@ export default function FeaturedProject({
   websiteLink,
 }: ProjectProps) {
   return (
-    <div>
+    <div className="py-40">
       <img src={image} alt="project_image" />
       <div className="px-40 py-12">
         <h2 className="py-4 text-3xl">{title}</h2>
@@ -34,14 +34,14 @@ export default function FeaturedProject({
           <div>
             {githubUrl && (
               <Link href={githubUrl}>
-                <button className="px-4 py-2 text-3xl text-sm hover:text-[#00d084]">
+                <button className="px-4 py-2 text-3xl hover:text-[#00d084]">
                   <BsGithub />
                 </button>
               </Link>
             )}
             {websiteLink && (
               <Link href={websiteLink}>
-                <button className="px-4 py-2 text-3xl text-sm hover:text-[#00d084]">
+                <button className="px-4 py-2 text-3xl hover:text-[#00d084]">
                   <BiLink />
                 </button>
               </Link>

@@ -5,19 +5,19 @@ export default function FeaturedBlogs() {
   const FAKE_BLOGS = [
     {
       id: "one",
-      image: "martin-martz-circles.jpg",
+      image: "newyorklife.jpg",
       title: "4 Venue Branding Examples From Our Portfolio",
       tags: ["CODING", "DEVELOPMENT"],
     },
     {
       id: "two",
-      image: "adam-bignell-coast.jpg",
+      image: "manageit.jpg",
       title: "Why We Need Strong Brands for a Tough World",
       tags: ["SEO", "STRATEGY"],
     },
     {
       id: "three",
-      image: "jaredd-craig-mist.jpg",
+      image: "reddit.jpg",
       title: "5 Personal Branding Examples From Our Portfolio",
       tags: ["BRANDING", "STRATEGY"],
     },

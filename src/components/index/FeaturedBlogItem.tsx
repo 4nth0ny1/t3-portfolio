@@ -17,7 +17,7 @@ export default function FeaturedBlog({
 
   return (
     <div
-      className="bg-black text-[#999999]"
+      className="bg-[#0b0b0b] text-[#999999]"
       onMouseOver={() => setIsHovering(true)}
       onMouseOut={() => setIsHovering(false)}
     >
