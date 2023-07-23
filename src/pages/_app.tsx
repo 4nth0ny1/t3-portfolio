@@ -15,7 +15,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setLoading(!loading), 5000);
+    setTimeout(() => setLoading(!loading), 8000);
   }, []);
 
   return (
