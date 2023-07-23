@@ -11,7 +11,14 @@ import { CgFramer } from "react-icons/cg";
 export default function PreLoader() {
   return (
     <div className="flex h-screen w-full flex-col justify-center bg-black text-center text-[#E3E3E3] ">
-      <h1 className="text-5xl ">Hi, I am Anthony</h1>
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 4, duration: 2 }}
+        className="pb-4 text-5xl"
+      >
+        My name is Anthony, and this my portfolio.
+      </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -32,7 +39,7 @@ export default function PreLoader() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 2 }}
+          transition={{ delay: 0.6, duration: 2 }}
           className="pt-4 text-5xl"
         >
           <TbBrandNextjs />
@@ -41,7 +48,7 @@ export default function PreLoader() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 2 }}
+          transition={{ delay: 0.7, duration: 2 }}
           className="pt-4 text-5xl text-[#f7df1e]"
         >
           <BiLogoJavascript />
@@ -49,7 +56,7 @@ export default function PreLoader() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 2 }}
+          transition={{ delay: 0.8, duration: 2 }}
           className="pt-4 text-5xl text-[#007acc]"
         >
           <BiLogoTypescript />
@@ -57,7 +64,7 @@ export default function PreLoader() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2.5, duration: 2 }}
+          transition={{ delay: 0.9, duration: 2 }}
           className="pt-4 text-5xl text-white"
         >
           <CgFramer />
@@ -66,7 +73,7 @@ export default function PreLoader() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 3, duration: 2 }}
+          transition={{ delay: 1, duration: 2 }}
           className="pt-4 text-5xl text-white"
         >
           <TbBrandPrisma />
@@ -74,7 +81,7 @@ export default function PreLoader() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 3.5, duration: 2 }}
+          transition={{ delay: 1.1, duration: 2 }}
           className="pt-4 text-5xl text-[#06b6d4]"
         >
           <BiLogoTailwindCss />
