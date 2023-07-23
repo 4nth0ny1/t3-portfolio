@@ -6,6 +6,7 @@ import "~/styles/globals.css";
 import Navbar from "../components/Navbar";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import PreLoader from "../components/PreLoader";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -14,15 +15,13 @@ const MyApp: AppType<{ session: Session | null }> = ({
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setLoading(!loading), 500);
+    setTimeout(() => setLoading(!loading), 5000);
   }, []);
 
   return (
     <SessionProvider session={session}>
       {!loading ? (
-        <div className="flex h-screen w-full flex-col justify-center bg-black">
-          <h1 className="text-center text-5xl text-[#E3E3E3]">😊</h1>
-        </div>
+        <PreLoader />
       ) : (
         <motion.div
           initial={{ opacity: 0 }}
