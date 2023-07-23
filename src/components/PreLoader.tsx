@@ -12,9 +12,9 @@ export default function PreLoader() {
   return (
     <div className="flex h-screen w-full flex-col justify-center bg-black text-center text-[#E3E3E3] ">
       <motion.h1
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 4, duration: 2 }}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 4, duration: 2, ease: [0, 0.71, 0.2, 1.01] }}
         className="pb-4 text-5xl"
       >
         My name is Anthony, and this my portfolio.
